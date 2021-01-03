@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_2210/globalvar.dart';
-import 'package:flutter_app_2210/main.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
 class Env1Card extends StatelessWidget {

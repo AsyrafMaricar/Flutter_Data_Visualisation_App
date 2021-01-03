@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_2210/alertslistpage.dart';
-import 'package:flutter_app_2210/popupwidget.dart';
 import 'gaugespage.dart';
 import 'chartspage.dart';
 import 'globalvar.dart';
@@ -34,17 +32,17 @@ class _HomePageState extends State<HomePage> {
         title: Text(
             widget.pageTitle,
             style: TextStyle(
-            fontFamily: "Montserrat Medium",
-            fontSize: 20,
-            color: mainTextColor,
-            fontWeight: FontWeight.normal)),
+                fontFamily: "Montserrat Medium",
+                fontSize: 20,
+                color: mainTextColor,
+                fontWeight: FontWeight.normal)),
         centerTitle: true,
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-           tabs[_currentIndex],
+            tabs[_currentIndex],
           ],
         ),
       ),
@@ -69,13 +67,9 @@ class _HomePageState extends State<HomePage> {
         onTap: (index) {
           setState(() {
             _currentIndex = index;
-            if(_currentIndex == 1) {
-              chartsMounted = true;
-            } else chartsMounted = false;
           });
         },
       ),
     );
   }
 }
-

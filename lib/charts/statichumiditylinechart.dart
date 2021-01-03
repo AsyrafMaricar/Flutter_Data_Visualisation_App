@@ -1,11 +1,9 @@
 import 'dart:async';
-import 'package:flutter_app_2210/charts/RSSIGauge.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter_app_2210/globalvar.dart';
-import 'package:intl/intl.dart';
 
 class StaticHumidityChart extends StatefulWidget {
   final int chartDataFirst;

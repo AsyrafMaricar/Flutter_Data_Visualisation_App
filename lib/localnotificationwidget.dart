@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_2210/aboutspage.dart';
+import 'package:flutter_app_2210/maindashboardpage.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'localNotificationhelper.dart';
-
-
+import 'localnotificationhelper.dart';
 
 class LocalNotificationWidget extends StatefulWidget {
   @override
@@ -17,12 +15,10 @@ class _LocalNotificationWidgetState extends State<LocalNotificationWidget> {
   @override
   void initState() {
     super.initState();
-
     final settingsAndroid = AndroidInitializationSettings('app_icon');
     final settingsIOS = IOSInitializationSettings(
         onDidReceiveLocalNotification: (id, title, body, payload) =>
             onSelectNotification(payload));
-
     notifications.initialize(
         InitializationSettings(android: settingsAndroid, iOS: settingsIOS),
         onSelectNotification: onSelectNotification);
@@ -30,7 +26,7 @@ class _LocalNotificationWidgetState extends State<LocalNotificationWidget> {
 
   Future onSelectNotification(String payload) async => await Navigator.push(
     context,
-    MaterialPageRoute(builder: (context) => AboutsPage(payload: payload)),
+    MaterialPageRoute(builder: (context) => MenuDashboardPage()),
   );
 
   @override
@@ -55,7 +51,7 @@ class _LocalNotificationWidgetState extends State<LocalNotificationWidget> {
               title: 'OtherTitle', body: 'OtherBody', id: 20),
         ),
         const SizedBox(height: 32),
-        title('Feautures'),
+        title('Features'),
         RaisedButton(
           child: Text('Silent notification'),
           onPressed: () => showSilentNotification(notifications,

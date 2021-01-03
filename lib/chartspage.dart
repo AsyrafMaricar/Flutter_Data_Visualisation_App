@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_2210/charts/movingtemplinechart.dart';
-import 'package:flutter_app_2210/charts/movinghumiditylinechart.dart';
 import 'package:flutter_app_2210/globalvar.dart';
 import 'package:flutter_app_2210/humiditytimepage.dart';
 import 'package:flutter_app_2210/orientationswitcher.dart';
@@ -18,13 +16,11 @@ class _ChartsPageState extends State<ChartsPage> {
         OrientationSwitcher(
           children: [
             TempTimePage(),
-            //MovingRealTempChart(),
           ],
         ),
         OrientationSwitcher(
           children: [
             HumidityTimePage(),
-            //MovingRealHumidityChart(),
           ],
         ),
   ];

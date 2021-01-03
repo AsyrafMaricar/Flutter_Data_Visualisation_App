@@ -22,7 +22,7 @@ class _AlertsTableState extends State<AlertsTable> {
 
   Future<String> getChartJsonFromDatabase() async {
     // Sending get(url) request using the http client to retrieve the response.
-    var response = await http.get("http://meter.m1sensordata.com/sensirionPHP/getenv101.php?n=360");
+    var response = await http.get("https://meter.m1sensordata.com/sensirionPHP/getenv101.php?n=360");
     return response.body;
   }
 

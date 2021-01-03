@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_2210/charts/movingtemplinechart.dart';
 import 'package:flutter_app_2210/charts/statictemplinechart.dart';
 import 'package:flutter_app_2210/globalvar.dart';
-import 'package:intl/intl.dart';
-import 'dart:convert';
-import 'package:http/http.dart' as http;
 
 class TempTimePage extends StatefulWidget {
 
@@ -16,7 +13,6 @@ class TempTimePage extends StatefulWidget {
 class _TempTimePageState extends State<TempTimePage> {
 
   List<Widget> containers = [
-    //StaticTempChart(chartDataFirst: 6),
     StaticTempChart(chartDataFirst: 60),
     StaticTempChart(chartDataFirst: 360),
     StaticTempChart(chartDataFirst: 3600),

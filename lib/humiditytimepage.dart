@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_2210/charts/movinghumiditylinechart.dart';
-import 'package:flutter_app_2210/globalvar.dart';
 import 'charts/statichumiditylinechart.dart';
 
 class HumidityTimePage extends StatefulWidget {
@@ -12,7 +11,6 @@ class HumidityTimePage extends StatefulWidget {
 class _HumidityTimePageState extends State<HumidityTimePage> {
 
   List<Widget> containers = [
-    //StaticHumidityChart(chartDataFirst: 6),
     StaticHumidityChart(chartDataFirst: 60),
     StaticHumidityChart(chartDataFirst: 360),
     StaticHumidityChart(chartDataFirst: 3600),

@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_2210/charts/BattGauge.dart';
-import 'package:flutter_app_2210/charts/OccupancyGauge.dart';
-import 'package:flutter_app_2210/charts/LuxGauge.dart';
 import 'package:flutter_app_2210/charts/RSSIGauge.dart';
 
 
@@ -16,7 +14,7 @@ class GaugePage extends StatelessWidget {
       return OrientationSwitcher(
         children: <Widget>[
           Container(height: (size.height - kToolbarHeight) * 0.4 ,child: RSSIGauge()),
-          Container(height: (size.height - kToolbarHeight) * 0.4, child: BatteryGauge()),//LuxGauge()),
+          Container(height: (size.height - kToolbarHeight) * 0.4, child: BatteryGauge()),
         ],
       );
   }

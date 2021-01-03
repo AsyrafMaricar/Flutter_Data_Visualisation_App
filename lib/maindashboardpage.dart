@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_2210/aboutspage.dart';
 import 'package:flutter_app_2210/alertslistpage.dart';
-import 'package:flutter_app_2210/homepage.dart';
+import 'package:flutter_app_2210/mainnavigatingpage.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'dashboardcards.dart';
 import 'globalvar.dart';
@@ -176,8 +176,8 @@ class _MenuDashboardPageState extends State<MenuDashboardPage> with SingleTicker
                                 InkWell(
                                   child: Env1Card(),
                                   onTap: () {
-                                    url = "http://meter.m1sensordata.com/sensirionPHP/getenv15.php?n=360";
-                                    singleUrl = "http://meter.m1sensordata.com/sensirionPHP/getenv15.php?n=0";
+                                    url = "https://meter.m1sensordata.com/sensirionPHP/getenv15.php?n=360";
+                                    singleUrl = "https://meter.m1sensordata.com/sensirionPHP/getenv15.php?n=0";
                                     Navigator.push(context, CupertinoPageRoute(
                                         builder: (context) => HomePage(pageTitle: 'Sensor 1',)),
                                     );
@@ -187,8 +187,8 @@ class _MenuDashboardPageState extends State<MenuDashboardPage> with SingleTicker
                                 InkWell(
                                   child: Env2Card(),
                                   onTap: () {
-                                    url = "http://meter.m1sensordata.com/sensirionPHP/getenv16.php?n=360";
-                                    singleUrl = "http://meter.m1sensordata.com/sensirionPHP/getenv16.php?n=0";
+                                    url = "https://meter.m1sensordata.com/sensirionPHP/getenv16.php?n=360";
+                                    singleUrl = "https://meter.m1sensordata.com/sensirionPHP/getenv16.php?n=0";
                                     Navigator.push(context, CupertinoPageRoute(
                                         builder: (context) => HomePage(pageTitle: 'Sensor 2',)),
                                     );
@@ -198,8 +198,8 @@ class _MenuDashboardPageState extends State<MenuDashboardPage> with SingleTicker
                                 InkWell(
                                   child: Env3Card(),
                                   onTap: () {
-                                    url = "http://meter.m1sensordata.com/sensirionPHP/getenv17.php?n=360";
-                                    singleUrl = "http://meter.m1sensordata.com/sensirionPHP/getenv17.php?n=0";
+                                    url = "https://meter.m1sensordata.com/sensirionPHP/getenv17.php?n=360";
+                                    singleUrl = "https://meter.m1sensordata.com/sensirionPHP/getenv17.php?n=0";
                                     Navigator.push(context, CupertinoPageRoute(
                                         builder: (context) => HomePage(pageTitle: 'Sensor 3',)),
                                     );
@@ -209,8 +209,8 @@ class _MenuDashboardPageState extends State<MenuDashboardPage> with SingleTicker
                                 InkWell(
                                   child: Env4Card(),
                                   onTap: () {
-                                    url = "http://meter.m1sensordata.com/sensirionPHP/getenv18.php?n=360";
-                                    singleUrl = "http://meter.m1sensordata.com/sensirionPHP/getenv18.php?n=0";
+                                    url = "https://meter.m1sensordata.com/sensirionPHP/getenv18.php?n=360";
+                                    singleUrl = "https://meter.m1sensordata.com/sensirionPHP/getenv18.php?n=0";
                                     Navigator.push(context, CupertinoPageRoute(
                                         builder: (context) => HomePage(pageTitle: 'Sensor 4',)),
                                     );
@@ -220,8 +220,8 @@ class _MenuDashboardPageState extends State<MenuDashboardPage> with SingleTicker
                                 InkWell(
                                   child: Env5Card(),
                                   onTap: () {
-                                    url = "http://meter.m1sensordata.com/sensirionPHP/getenv22.php?n=360";
-                                    singleUrl = "http://meter.m1sensordata.com/sensirionPHP/getenv22.php?n=0";
+                                    url = "https://meter.m1sensordata.com/sensirionPHP/getenv18.php?n=360";
+                                    singleUrl = "https://meter.m1sensordata.com/sensirionPHP/getenv18.php?n=0";
                                     Navigator.push(context, CupertinoPageRoute(
                                         builder: (context) => HomePage(pageTitle: 'Sensor 5',)),
                                     );
@@ -231,8 +231,8 @@ class _MenuDashboardPageState extends State<MenuDashboardPage> with SingleTicker
                                 InkWell(
                                   child: Env6Card(),
                                   onTap: () {
-                                    url = "http://meter.m1sensordata.com/sensirionPHP/getenv22.php?n=360";
-                                    singleUrl = "http://meter.m1sensordata.com/sensirionPHP/getenv22.php?n=0";
+                                    url = "https://meter.m1sensordata.com/sensirionPHP/getenv18.php?n=360";
+                                    singleUrl = "https://meter.m1sensordata.com/sensirionPHP/getenv18.php?n=0";
                                     Navigator.push(context, CupertinoPageRoute(
                                         builder: (context) => HomePage(pageTitle: 'Sensor 6',)),
                                     );

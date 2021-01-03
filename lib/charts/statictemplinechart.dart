@@ -1,11 +1,9 @@
 import 'dart:async';
-import 'package:flutter_app_2210/charts/RSSIGauge.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter_app_2210/globalvar.dart';
-import 'package:intl/intl.dart';
 
 class StaticTempChart extends StatefulWidget {
   final int chartDataFirst;
@@ -83,8 +81,8 @@ class _StaticTempChartState extends State<StaticTempChart> with AutomaticKeepAli
 
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      elevation: 5,
-      color: cardColors,
+      elevation: 10,
+      color: subCardColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -116,8 +114,8 @@ class _StaticTempChartState extends State<StaticTempChart> with AutomaticKeepAli
 
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      elevation: 5,
-      color: cardColors,
+      elevation: 10,
+      color: subCardColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,

@@ -14,10 +14,16 @@ class LuxGauge extends StatefulWidget {
 
 class _LuxGaugeState extends State<LuxGauge> {
 
-  List<SensorData> chartData = []; // list for storing the last parsed Json data
+  List<SensirionData> chartData = []; // list for storing the last parsed Json data
   bool loading = true;
   double lastVal;
   Timer _loadTimer;
+
+  _LuxGaugeState() {
+    _loadTimer = Timer.periodic(Duration(seconds: 5), (Timer t) {
+      loadSensorData();
+    });
+  }
 
   Future<String> getChartJsonFromDatabase() async {
     // Sending get(url) request using the http client to retrieve the response.
@@ -35,7 +41,7 @@ class _LuxGaugeState extends State<LuxGauge> {
         // Mapping the retrieved json response string and adding the sensor data to the chart data list.
         for (Map i in jsonResponse){
           chartData.add(
-              SensorData.fromJson(i) // Deserialization step #3
+              SensirionData.fromJson(i) // Deserialization step #3
           );}
         lastVal = double.parse(chartData.last.toString());
       }
@@ -47,12 +53,6 @@ class _LuxGaugeState extends State<LuxGauge> {
   @override
   void initState() {
     loadSensorData();
-    _loadTimer = Timer.periodic(Duration(seconds: 8), (Timer t) {
-      loadSensorData();
-      if (this.mounted == false){
-        _loadTimer.cancel();
-      }
-    });
     super.initState();
   }
 
@@ -117,19 +117,4 @@ class _LuxGaugeState extends State<LuxGauge> {
       child: _buildChild()
     );
   }
-
-}
-
-class SensorData {
-  SensorData(this.sen3);
-
-  dynamic sen3;
-
-  factory SensorData.fromJson(Map<String, dynamic> parsedJson) {
-    return SensorData(
-      parsedJson['Sen3'] as dynamic,
-    );
-  }
-
-  @override toString() => '$sen3';
 }

@@ -14,10 +14,16 @@ class RSSIGauge extends StatefulWidget {
 
 class _RSSIGaugeState extends State<RSSIGauge> {
 
-  List<SensorData> chartData = []; // list for storing the last parsed Json data
+  List<SensirionData> chartData = []; // list for storing the last parsed Json data
   bool loading = true;
   double lastVal;
   Timer _loadTimer;
+
+  _RSSIGaugeState() {
+    _loadTimer = Timer.periodic(Duration(seconds: 5), (Timer t) {
+      loadSensorData();
+    });
+  }
 
   Future<String> getChartJsonFromDatabase() async {
     // Sending get(url) request using the http client to retrieve the response.
@@ -35,7 +41,7 @@ class _RSSIGaugeState extends State<RSSIGauge> {
         // Mapping the retrieved json response string and adding the sensor data to the chart data list.
         for (Map i in jsonResponse){
           chartData.add(
-              SensorData.fromJson(i) // Deserialization step #3
+              SensirionData.fromJson(i) // Deserialization step #3
           );}
         lastVal = double.parse(chartData.last.sen4.toString());
       }
@@ -47,12 +53,6 @@ class _RSSIGaugeState extends State<RSSIGauge> {
   @override
   void initState() {
     loadSensorData();
-    _loadTimer = Timer.periodic(Duration(seconds: 10), (Timer t) {
-      loadSensorData();
-      if (this.mounted == false){
-        _loadTimer.cancel();
-      }
-    });
     super.initState();
   }
 
@@ -117,19 +117,4 @@ class _RSSIGaugeState extends State<RSSIGauge> {
         child: _buildChild()
     );
   }
-
-}
-
-class SensorData {
-  SensorData(this.sen4);
-
-  dynamic sen4;
-
-  factory SensorData.fromJson(Map<String, dynamic> parsedJson) {
-    return SensorData(
-      parsedJson['Sen4'] as dynamic,
-    );
-  }
-
-  @override toString() => '$sen4';
 }

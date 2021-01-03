@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_2210/globalvar.dart';
-import 'package:flutter_icons/flutter_icons.dart';
 
 class AboutsPage extends StatelessWidget {
   final String payload;
@@ -61,15 +60,22 @@ class AboutsPage extends StatelessWidget {
                           children: [
                             Center(
                               child: Text('This is a data visualisation application created for IE4001 Smart Facility Management at Singapore Polytechnic.',
-                                style: TextStyle(fontFamily: "Montserrat Medium", fontSize: 16),
-                                textAlign: TextAlign.center,
+                                style: TextStyle(fontFamily: "Montserrat Medium", fontSize: 12),
+                                textAlign: TextAlign.left,
                                 textScaleFactor: 1.5,
                               ),
                             ),
                             Center(
                               child: Text('\nThis application is developed using the Flutter SDK and retrieves its data from a REST API connected to the database on AWS ',
-                                style: TextStyle(fontFamily: "Montserrat Medium", fontSize: 16),
-                                textAlign: TextAlign.center,
+                                style: TextStyle(fontFamily: "Montserrat Medium", fontSize: 12),
+                                textAlign: TextAlign.left,
+                                textScaleFactor: 1.5,
+                              ),
+                            ),
+                            Center(
+                              child: Text('\nEnvironmental data is collected from Bluetooth-Low Energy Sensors placed within each environments',
+                                style: TextStyle(fontFamily: "Montserrat Medium", fontSize: 12),
+                                textAlign: TextAlign.left,
                                 textScaleFactor: 1.5,
                               ),
                             ),
@@ -77,6 +83,15 @@ class AboutsPage extends StatelessWidget {
                         ),
                       ),
                       Expanded(child: SizedBox()),
+                      Container(
+                        child: Center(
+                          child: Text('To report bugs or issues, contact support at:\nEmail: reportsupport@gmail.com  \nContact: 12345678',
+                            style: TextStyle(fontFamily: "Montserrat Medium", fontSize: 12),
+                            textAlign: TextAlign.left,
+                            textScaleFactor: 1.5,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),

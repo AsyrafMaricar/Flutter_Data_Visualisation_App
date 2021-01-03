@@ -1,13 +1,12 @@
 import 'dart:async';
 import 'package:async/async.dart';
-import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter_app_2210/globalvar.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:flutter_app_2210/localNotificationhelper.dart';
+import 'package:flutter_app_2210/localnotificationhelper.dart';
 import 'package:flutter_app_2210/aboutspage.dart';
 
 
